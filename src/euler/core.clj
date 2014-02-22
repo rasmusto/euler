@@ -219,3 +219,18 @@
                         (< b c)
                         (= 12 (+ a b c)))]
          [a b c]))
+
+
+; Summation of primes
+; Problem 10
+
+; The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+; Find the sum of all the primes below two million.
+
+(defn sum-of-primes [max-n]
+  (reduce + (filter prime? (range 2 max-n))))
+
+(comment
+  (sum-of-primes 10)
+  )
